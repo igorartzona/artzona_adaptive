@@ -1,0 +1,384 @@
+/*
+Theme Name: Artzona Adaptive Theme
+Theme URI: http://artzona.org
+Description: Адаптивная тема для  Вордпресс. Поддерживает несколько меню, адаптировано под мобильные устройства.Поддержка тэга more, анонсов(цитат) и полных записей. Встроен genericons.
+Author: jvj
+Author URI: http://artzona.org
+Version: 1.0
+*/
+
+/*----
+1. Reset
+2. Artzona style
+	2.1 Sidebar
+	2.2 Primary menu
+	2.3 Content
+	2.4 Footer
+	2.5 Link
+	2.6 Comments
+3. Media query
+----*/
+
+
+/*--- 1. Reset ---*/
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  font-size: 100%;
+	  font: inherit;
+	  vertical-align: baseline; }
+
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+	  display: block; }
+
+	body {line-height: 1;}
+
+	ol, ul {list-style: none;}
+
+	blockquote, q {quotes: none;}
+
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+	  content: '';
+	  content: none; }
+
+	table {border-collapse: collapse; border-spacing: 0;}
+
+	blockquote{
+		margin-left:2.08333%;
+		border-left:2px solid gray;
+		background:#e9e9e9;
+		border-radius:0.3em;
+		font-size:0.9em;
+	}
+	
+	strong {font-weight: bold;}
+	
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+		visibility: hidden;
+		height: 0px;
+	}
+
+/*--- 2. Artzona style ---*/
+
+	img {max-width:100%;	height:auto;}  
+	
+	iframe {max-width:100%;}
+
+	body {
+	  font-family: "PT Sans Caption", arial, verdana, sans-serif; 
+	  font-size:1em;	  
+	}
+	  
+	#az-wrap {
+		width: 93.75%; /*960/1024*/
+		margin: 0 auto;	
+	} 
+
+	.az-hidden{display:none;}
+	.az-visible{visibility:visible;}
+	.az-clear{clear:both;}
+
+	h1,h2 {font-weight:bold;}
+
+	h1 a{text-decoration:none;color:#000;}
+	
+	.az-description{
+		color: gray; 
+		font-size: 0.9em;
+		border-bottom: 1px solid gray;
+		border-top: 1px solid gray;		
+		line-height: 2em;
+	}
+
+		/*-- 2.1 Sidebar--*/
+
+		#az-header {	padding:1.53846%;text-align:center;}
+		
+		.az-title {line-height: 2.5em;}
+
+		address{text-align:right;margin-top:1.53846%;}
+
+		address hr{width:20%;float:right;}
+		
+		.tel{	
+			font-weight:bold;
+			font-size:0.9em;
+			font-family:Verdana;
+			text-decoration:none;
+			color:#000;
+		}
+
+		#az-sidebar{
+			width: 20.833333%; /*200/960*/	
+			float:left;
+			word-wrap:break-word; /*-втискивание слов, если выходят за границы-*/
+			font-size:0.8em;
+		}
+
+		#az-sidebar h4 {font-weight:bold;}
+
+		.az-widget{
+			font-weight:bold;
+			background:maroon;
+			color:#fff;
+			padding:1.53846%;
+			margin-bottom:1.53846%;
+		}
+		
+		.widget {border-bottom: 2px solid gray;padding: 3% 0;}
+
+	/*-- 2.2 Primary Menu --*/
+	
+		#menu-checkbox {display:none;}	
+		
+		.az-primary-nav, .az-pagi {text-align:center;}
+
+		.az-primary-nav li{display: inline-block;	padding:0.307692%;}
+
+		.az-primary-nav li:before{content:"| \0020";}
+
+		.az-primary-nav li:first-child:before {content:"";}
+
+		.az-primary-nav a{text-decoration:none;font-weight:bold;	font-size:0.8em;text-transform: uppercase;}
+
+		.az-primary-nav a:hover{color:maroon;}
+			
+		.current-menu-item a{color:maroon;font-size: 1.2em;}
+		
+		.az-primary-nav{border-bottom:1px solid gray;}
+
+		.az-primary-nav ul{padding:0.307692%;} 
+		.az-primary-nav li{padding:0;}
+		 
+		.menu > li:hover > ul{display:block;}
+
+		.menu  >li >ul {display:none;}
+
+		.menu-item-has-children:after{
+			color: maroon;
+			font: 0.6em "Genericons";
+			content: '\f502';    
+			vertical-align: sub;
+		}
+
+		.sub-menu{
+			display:block;
+			position:absolute;
+			font-size:0.8em;
+			text-transform:none;
+			text-align:left;
+			background:white;
+			border:1px solid gray;
+			padding:1%;
+		}
+
+		.sub-menu  li {
+			display:inline-block;
+		}
+
+	/*-- 2.3 Content--*/
+		
+		.breadcrumbs{font-size:0.7em;color:gray;margin:1.53846% 0;}
+
+		#az-content{
+			width:78.125%; /*750/960*/
+			margin-left:21.875%; /*310/960*/
+			overflow: hidden; /*для сбрасывания внутренних float-ов*/
+		}
+		
+		.sticky{background:#e9e9e9;padding:0.76923%;}
+		
+		.more-link{text-indent:1.53846%; font-size:0.9em;}
+
+		#az-content article { margin: 1.53846% 0; /*10/650*/}
+		
+		.az-archiveTitle {	float:right;font-size:0.7em;color:gray;	}
+				
+		.az-thumbnail-single{text-align:center;}
+			
+		.az-thumbnail img{padding:0 1px;margin:0 1.53846% 1.53846% 0;float:left;	}
+
+		article h3{			
+			padding: 0.307692%; /*1.53846/5 - в пять раз меньше отступа от меню*/
+			font-weight:bold;
+			text-transform:uppercase;
+			font-size:1.1em;
+		}
+		
+		.entry ul, ol {list-style: inside none disc;padding: 1.53846%;	}
+		.entry  td{ border:1px solid gray;padding:2px;}
+		.entry table{margin:1.53846% 0;}
+		
+		.az-article-meta {
+			color:gray;
+			font-size:0.6em;
+			font-family:Tahoma;
+			margin:0.307692%;
+		}		
+
+		article p {	padding:0.76923%;}
+		
+		.az-pagi {margin-bottom:1.53846%;}
+
+	/*-- 2.4 Footer --*/
+
+		footer{			
+			width:100%;
+			text-align:right;
+			font-size:0.8em;
+			color:gray;
+		}  
+	    
+	/*--- 2.5 Link ---*/ 
+
+		a {color:#4E4F54;}
+
+		a:hover{color:maroon;text-decoration:underline;	}
+
+		a[href$=".zip"]:after, 
+		a[href$=".exe"]:after,
+		a[href$=".rar"]:after ,
+		a[href$=".doc"]:after ,
+		a[href$=".pdf"]:after 
+		{font-family: "genericons";font-size: 1.2em;content:'\f416';}
+		
+
+	/*--- 2.6 Comments ---*/ 
+		
+		#submit{background:maroon;color:#fff;font-weight:bold;}
+		#submit:hover{cursor:pointer;background:#fff;color:maroon;}
+		
+		.pre_comment {font-size:0.8em;color:gray;}
+
+		#comment{width:100%;}
+		
+		.comment-reply-title {font-weight:bold;font-size:0.9em;line-height:2em;}
+		
+		.comment-form-author{font-weight:bold;}
+		.comment-form{margin-top:1.53846%;}
+		
+		.comment-meta{color: gray;font-size: 0.7em;}
+		
+		.az-commenttext {
+			background: #f2f2f2 none repeat scroll 0 0;
+			border-radius: 5%;
+			margin: 1.53846%;
+			padding: 1.53846%;
+		}
+		
+		.comment-respond{ 
+			border: 1px dotted #ccc;
+			margin: 1.53846% 0;
+			padding: 1.53846%;
+			background:#e9e9e9;
+		}
+		
+		#respond {font-weight: bold;}
+		#respond input , #respond textarea{font-weight: bold;}
+		
+				
+
+/*--- 3. Media query ---*/
+
+@media screen and (min-width: 960px) {
+  body {
+    /*background: silver;*/ }
+	#az-header {
+		/*height:150px;*/
+	}
+}
+@media screen and (max-width: 960px) {
+  body {/*background: red;*/}
+   }
+@media screen and (max-width: 768px) {
+  body {
+    /*background: green;*/ } }
+@media screen and (max-width: 640px) {
+	body {/*background: blue;*/} 
+	#az-wrap {width:100%;}
+	/*header h2{display:none;}*/
+	address{font-size:0.8em;}	
+	#az-sidebar{float:none;width:100%;}
+	
+	.widget {display:none;}
+		
+	/*Адаптивное меню-*/
+	
+		.az-primary-nav{text-align:left;}
+		.menu {display:none;}
+			
+		.menu li {		 
+			  font-size: 1em;
+			  display: block;
+			  width: 100%;
+		}
+		.toggle-button {
+		  float:left;
+		  display: block;	  
+		  cursor: pointer;
+		}
+		.toggle-button:after {  
+		  font-family: "genericons";font-size: 1.2em;
+		  content: '\f419';
+		  display: block;
+		  margin: 10px 0;
+		  padding: 10px 30px;
+		}
+		
+		.az-primary-nav li::before {content:"";}
+		
+		.sub-menu{position:relative;border:0;}
+		
+		#menu-checkbox:checked + nav[role="navigation"] .menu { 
+		  display: block;
+		}
+		
+		#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+		  font-family: "genericons";font-size: 1.2em;
+		  content: '\f406';
+		}
+		
+		.menu-item-has-children:after{
+			color: maroon;
+			font: 1em "Genericons";
+			content: '\f501';    
+			vertical-align: baseline;
+		}
+		
+		.sub-menu li{}
+	
+	/*--конец меню --*/
+	
+	
+	#az-content{	width:100%;	margin-left:0;}
+	.breadcrumbs{display:none;}
+	.az-thumbnail{text-align:center;}
+	.az-thumbnail img{padding:0;border: 0;float:none;}
+	.az-post{font-size:0.9em;}
+  }
+@media screen and (max-width: 480px) {
+  body {/*background: maroon;*/}  
+  
+  }
+
+
+
