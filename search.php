@@ -15,9 +15,9 @@
         
         	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
             	<h3><a href="<?php the_permalink() ?>"> <?php the_title();?> </a> </h3>        
-                               
-                <div class="entry">
-                	<?php the_excerpt(); ?>
+                <div class="az-thumbnail"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail($size = 'thumbnail', $attr = '' ); ?></a> </div>                
+                <div class="entry clearfix">
+                	<?php echo content(20); ?>
                 </div>   
                                 
                 

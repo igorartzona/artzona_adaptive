@@ -6,7 +6,9 @@
     <nav class="az-primary-nav" role="navigation">
 		 <label for="menu-checkbox" class="toggle-button" onclick></label>
 		 <div class="az-clear"></div>
-		<?php wp_nav_menu( array('theme_location' => 'az_menu') ); ?>
+		<?php
+				wp_nav_menu( array('theme_location' => 'az_menu') );
+		?>
     </nav>
 
 	<?php if (have_posts() ) : ?>
@@ -21,9 +23,7 @@
                     <div class="az-thumbnail"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a></div>
                 	<div class="az-post clearfix">					
 						<?php	
-						     /*---Игноирирование тэга "more" в прилепленной записи ---*/
-							if (is_sticky()) { global $more; $more = 1;}  else $more =0;
-							
+						  							
 							/*---Обработка записей перед выводом - если есть цитаты, выводим, иначе - полный текст ---*/
 							if(has_excerpt()) { 
 							  $length = apply_filters('excerpt_length',40);

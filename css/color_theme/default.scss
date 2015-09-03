@@ -1,0 +1,58 @@
+
+$black-color: #000;
+$white-color: #FFF;
+$gray-color: gray;
+
+$az-light-gray : #e9e9e9;
+$az-maroon-color: #BD2447;
+$az-a-color:#4E4F54; 
+$az-light-white:#f2f2f2;
+$az-ccc:#ccc;
+
+
+/*--- 2. Artzona style ---*/
+	blockquote {background:$az-light-gray;border-left:2px solid $gray-color;}
+
+/*-- 2.1 Sidebar--*/
+	h1 a {color:$black-color;}
+	.az-description {
+		color:$gray-color;
+		border-bottom: 1px solid $gray-color;
+		border-top: 1px solid $gray-color;		
+	}
+	.tel {color:$black-color;}
+	.az-widget {background:$az-maroon-color;color:$white-color;}
+	.widget {border-bottom: 2px solid $gray-color;}
+
+/*-- 2.2 Primary Menu --*/
+	.az-primary-nav a:hover {color:$az-maroon-color;}
+	.current-menu-item a {color:$az-maroon-color;}
+	.az-primary-nav {border-bottom:1px solid $gray-color;}
+	.menu-item-has-children:after {color: $az-maroon-color;}
+	.sub-menu {background:$white-color;border:1px solid $gray-color;}
+	
+/*-- 2.3 Content--*/
+	.breadcrumbs {color:$gray-color;}
+	.sticky {background:$az-light-gray;}
+	.az-archiveTitle {color:$gray-color;}
+	.entry  td {border:1px solid $gray-color;}
+	.az-article-meta {color:$gray-color;}
+	.page-numbers {background:$az-a-color;color:$white-color;}
+	.navigation >a:hover{background:$az-maroon-color;color:$white-color;}
+	.navigation > .current{background:$az-maroon-color;}
+	
+	
+/*-- 2.4 Footer --*/
+	footer {color:$gray-color;} 
+	
+/*--- 2.5 Link ---*/ 
+	a {color:$az-a-color;}
+	a:hover {color:$az-maroon-color;}
+	
+/*--- 2.6 Comments ---*/ 		
+	#submit {background:$az-maroon-color;color:$white-color;}
+	#submit:hover {background:$white-color;color:$az-maroon-color;}
+	.pre_comment {color:$gray-color;}
+	.comment-meta {color:$gray-color;}
+	.az-commenttext {background:$az-light-white;}
+	.comment-respond {border: 1px dotted $az-ccc;background:$az-light-gray;}

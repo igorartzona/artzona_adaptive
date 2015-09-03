@@ -27,6 +27,7 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'> <!--шрифт -->
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/color_theme/default.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 <!--[if lt IE 9]>
@@ -66,7 +67,10 @@
 			</a>
 			
 			<h1 class="az-title">
-				<a href="<?php  echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>	
+				<a href="<?php  echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+<div class="tel">
++7900123456789
+</div>				
 			</h1>				
 				
 				<h2 class="az-description"><?php bloginfo( 'description' ); ?></h2>	

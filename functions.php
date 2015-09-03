@@ -63,18 +63,23 @@ $defaults = array(
  ); 
 add_theme_support( 'custom-background', $defaults );
 
-
-/*--------Регистрация меню----------------------*/
-register_nav_menus( 
-	array('az_menu' => 'Основное меню')
- );
-
-
 /*--------Поддержка настройки логотипа-----------------*/
 $args = array(  
   'uploads'       => true,
 );
 add_theme_support( 'custom-header', $args );
+
+//Добавление поддержки миниатюр
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(320, 200);
+
+//html5-тэги в комментариях и поиске
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+
+/*--------Регистрация меню----------------------*/
+register_nav_menus( 
+	array('az_menu' => 'Основное меню')
+ );
 
 /*----Регистрация сайдбара---*/
 if (function_exists('register_sidebar')) {
@@ -97,13 +102,26 @@ function new_excerpt_more($more){
 }
 add_filter('excerpt_more','new_excerpt_more');
 
+/*--- Обрезка the content ---*/
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+  if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'...<br><a href="'.get_permalink($post->ID).'"><span style="font-size:0.8em;padding-left:1%;"> Читать далее&rArr;</span></a>';
+  } else {
+    $content = implode(" ",$content);
+  }           
+  $content = preg_replace('/\[.+\]/','', $content);
+  $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]&gt;', $content);
+  return $content;
+}
+
 /*---функция проверки картинки заголовка (для совместимости со старыми версиями WP)---*/
 function az_has_header_image() { return (bool) get_header_image(); }
 
 
-//Добавление поддержки миниатюр
-add_theme_support('post-thumbnails');
-set_post_thumbnail_size(320, 200);
+
 
 // Функция пагинации
 function wp_corenavi() {  
