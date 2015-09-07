@@ -23,9 +23,9 @@
                 </div>             
               
                 <div class="az-article-meta">
-					<em> Опубликовано: </em> <?php echo get_the_date(); ?>  
-                    <?php the_tags('Метки:',',',' ');?>
-                    Категория : <?php the_category(',')?>
+					<span class="az-child-meta"><em> Опубликовано: </em> <?php echo get_the_date(); ?> </span> 
+                    <span class="az-child-meta"><?php the_tags('Метки : ',',',' ');?></span>
+                    <span class="az-child-meta">Категория : <?php the_category(',')?></span>
                     <?php comments_popup_link('Нет комментариев', '1 комментарий','% комментариев'); ?>
                 </div>
                 

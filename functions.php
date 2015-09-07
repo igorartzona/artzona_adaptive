@@ -379,5 +379,8 @@ function dimox_breadcrumbs() {
  }
 } // end dimox_breadcrumbs
 
-
+// подключение файла настроек темы
+ include_once('az-settings.php');
+ 
+ 
 ?>

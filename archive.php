@@ -35,7 +35,7 @@
                 
                 <div class="az-article-meta">
 					<em> Опубликовано: </em> <?php echo get_the_date(); ?>  
-                    Категория : <?php the_category(',')?>
+                    <span class="az-child-meta">Категория : <?php the_category(',')?></span>
                     Комментарии : <?php comments_popup_link('Нет комментариев', '1 комментарий','% комментариев'); ?>
                 </div>
                    

@@ -79,11 +79,12 @@ Version: 1.01
 	iframe {max-width:100%;}	
 
 	blockquote{
-		margin-left:2.08333%;			
+		margin-left:1.53846%;			
 		border-radius:0.3em;
 		font-size:0.9em;
-		
-	}
+		display: inline-block;
+		padding: 1.53846%;
+	}	
 	
 	body {font-family: "PT Sans Caption", arial, verdana, sans-serif; font-size:1em;}
 	
@@ -202,7 +203,9 @@ Version: 1.01
 			font-size:0.6em;
 			font-family:Tahoma;
 			margin:0.307692%;
-		}		
+		}
+
+		.az-child-meta{padding-right:0.76923%;}
 
 		article p {	padding:0.76923%;}
 				
@@ -261,7 +264,16 @@ Version: 1.01
 		}
 		
 		#respond {font-weight: bold;}
-		#respond input , #respond textarea{font-weight: bold;}	
+		#respond input , #respond textarea{font-weight: bold;}
+		#respond input {width: 25%;}		
+		#respond input {		
+			font-family: Tahoma;
+			font-size: 0.9em;
+			font-weight: bold;
+			margin: 0.76923%;
+		}	
+		
+		.required {font-family: Tahoma;}
 
 /*--- 3. Media query ---*/
 

@@ -1,7 +1,7 @@
 /*--- 2. Artzona style ---*/
 blockquote {
   background: #e9e9e9;
-  border-left: 2px solid #BD2447; }
+  border-left: 2px solid #60DA5A; }
 
 /*-- 2.1 Sidebar--*/
 h1 a {
@@ -16,7 +16,7 @@ h1 a {
   color: #000; }
 
 .az-widget {
-  background: #BD2447;
+  background: #60DA5A;
   color: #FFF; }
 
 .widget {
@@ -24,16 +24,16 @@ h1 a {
 
 /*-- 2.2 Primary Menu --*/
 .az-primary-nav a:hover {
-  color: #BD2447; }
+  color: #60DA5A; }
 
 .current-menu-item a {
-  color: #BD2447; }
+  color: #60DA5A; }
 
 .az-primary-nav {
   border-bottom: 1px solid gray; }
 
 .menu-item-has-children:after {
-  color: #BD2447; }
+  color: #60DA5A; }
 
 .sub-menu {
   background: #FFF;
@@ -60,11 +60,11 @@ h1 a {
   color: #FFF; }
 
 .navigation > a:hover {
-  background: #BD2447;
+  background: #60DA5A;
   color: #FFF; }
 
 .navigation > .current {
-  background: #BD2447; }
+  background: #60DA5A; }
 
 /*-- 2.4 Footer --*/
 footer {
@@ -75,16 +75,16 @@ a {
   color: #4E4F54; }
 
 a:hover {
-  color: #BD2447; }
+  color: #60DA5A; }
 
 /*--- 2.6 Comments ---*/
 #submit {
-  background: #BD2447;
+  background: #60DA5A;
   color: #FFF; }
 
 #submit:hover {
   background: #FFF;
-  color: #BD2447; }
+  color: #60DA5A; }
 
 .pre_comment {
   color: gray; }
@@ -106,6 +106,6 @@ a:hover {
   background: #fde1e1; }
 
 .required {
-  color: #BD2447; }
+  color: #60DA5A; }
 
-/*# sourceMappingURL=default.css.map */
+/*# sourceMappingURL=green.css.map */

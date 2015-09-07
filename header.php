@@ -7,7 +7,8 @@
 <title>
    <?php
 	global $page, $paged; // определение переменных для отображения разных заголовков
-
+	$options = get_option( 'wpuniq_theme_options' ); //инициализация настроек темы
+	if ( !$options[color] ) $options[color]='default'; 
 	wp_title( '|', true, 'right' ); // Добавление названия сайта
 	
 	bloginfo( 'name' );
@@ -27,7 +28,7 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'> <!--шрифт -->
 
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/color_theme/default.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/color_theme/<?php echo $options[color]; ?>.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 <!--[if lt IE 9]>
