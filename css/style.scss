@@ -4,7 +4,7 @@ Theme URI: http://artzona.org
 Description: Адаптивная тема для  Вордпресс. Поддерживает несколько меню, адаптировано под мобильные устройства.Поддержка тэга more, анонсов(цитат) и полных записей. Встроен genericons.
 Author: jvj
 Author URI: http://artzona.org
-Version: 1.01
+Version: 1.02
 */
 
 /*----
@@ -74,6 +74,7 @@ Version: 1.01
 	.az-hidden{display:none;}
 	.az-visible{visibility:visible;}
 	.az-clear{clear:both;}
+	.az-right{text-align:right;}
 		
 	img {max-width:100%;height:auto;}	
 	iframe {max-width:100%;}	
@@ -105,7 +106,7 @@ Version: 1.01
 		address{text-align:right;margin-top:1.53846%;}
 		address hr{width:20%;float:right;}
 		
-		.tel{font: bold 0.9em Verdana;text-decoration:none;	}
+		.tel{text-decoration:none; margin:1.53846% 0;}
 
 		#az-sidebar{
 			width: 20.833333%; /*200/960*/	
@@ -192,7 +193,7 @@ Version: 1.01
 			padding: 0.307692%; /*1.53846/5 - в пять раз меньше отступа от меню*/
 			font-weight:bold;
 			text-transform:uppercase;
-			font-size:1.1em;
+			font-size:1.1em;			
 		}
 		
 		.entry ul, ol {list-style: inside none disc;padding: 1.53846%;	}

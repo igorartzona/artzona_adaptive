@@ -2,10 +2,10 @@
 /*
 Theme Name: Artzona Adaptive Theme
 Theme URI: http://artzona.org
-Description: ╨Р╨┤╨░╨┐╤В╨╕╨▓╨╜╨░╤П ╤В╨╡╨╝╨░ ╨┤╨╗╤П  ╨Т╨╛╤А╨┤╨┐╤А╨╡╤Б╤Б. ╨Я╨╛╨┤╨┤╨╡╤А╨╢╨╕╨▓╨░╨╡╤В ╨╜╨╡╤Б╨║╨╛╨╗╤М╨║╨╛ ╨╝╨╡╨╜╤О, ╨░╨┤╨░╨┐╤В╨╕╤А╨╛╨▓╨░╨╜╨╛ ╨┐╨╛╨┤ ╨╝╨╛╨▒╨╕╨╗╤М╨╜╤Л╨╡ ╤Г╤Б╤В╤А╨╛╨╣╤Б╤В╨▓╨░.╨Я╨╛╨┤╨┤╨╡╤А╨╢╨║╨░ ╤В╤Н╨│╨░ more, ╨░╨╜╨╛╨╜╤Б╨╛╨▓(╤Ж╨╕╤В╨░╤В) ╨╕ ╨┐╨╛╨╗╨╜╤Л╤Е ╨╖╨░╨┐╨╕╤Б╨╡╨╣. ╨Т╤Б╤В╤А╨╛╨╡╨╜ genericons.
+Description: Адаптивная тема для  Вордпресс. Поддерживает несколько меню, адаптировано под мобильные устройства.Поддержка тэга more, анонсов(цитат) и полных записей. Встроен genericons.
 Author: jvj
 Author URI: http://artzona.org
-Version: 1.01
+Version: 1.02
 */
 /*----
 1. Reset
@@ -85,6 +85,9 @@ strong {
 .az-clear {
   clear: both; }
 
+.az-right {
+  text-align: right; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -132,8 +135,8 @@ address hr {
   float: right; }
 
 .tel {
-  font: bold 0.9em Verdana;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 1.53846% 0; }
 
 #az-sidebar {
   width: 20.833333%;
